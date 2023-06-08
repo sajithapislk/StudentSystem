@@ -18,16 +18,12 @@ namespace Project1.DAO
             {
                 try
                 {
-                    // Open the connection to the database
                     connection.Open();
 
-                    // Define the SQL query to execute
-                    //string query = "INSERT INTO students(first_name,last_name,date_of_birth,gender,address,home_tp) VALUES('" + firstName + "','" + lsatName + "','" + dob + "','" + gender + "','" + address + "','" + tp + "')";
                     string query = "INSERT INTO students(first_name,last_name,date_of_birth,gender,address,home_tp) VALUES(@firstName,@lsatName,@dob,@gender,@address,@tp)";
 
                     SqlCommand command = new SqlCommand(query, connection);
-
-                    // Set the command's parameters.
+                    
                     command.Parameters.AddWithValue("@firstName", firstName);
                     command.Parameters.AddWithValue("@lsatName", lsatName);
                     command.Parameters.AddWithValue("@dob", dob);
@@ -41,7 +37,6 @@ namespace Project1.DAO
                 }
                 catch (Exception ex)
                 {
-                    // An error occurred while trying to connect to the database
                     return false;
                 }
             }
@@ -53,17 +48,13 @@ namespace Project1.DAO
             {
                 try
                 {
-                    // Open the connection to the database
                     connection.Open();
-
-                    // Define the SQL query to execute
-                    //string query = "UPDATE students SET first_name='" + firstName + "',last_name='" + lsatName + "',date_of_birth='" + dob + "',gender='" + gender + "',address='" + address + "',home_tp='" + tp + "' WHERE id='" + id + "'";
+                    
                     string query = "UPDATE students SET first_name=@firstName,last_name=@lsatName,date_of_birth=@dob,gender=@gender,address=@address,home_tp=@tp WHERE id=@id";
 
 
                     SqlCommand command = new SqlCommand(query, connection);
-
-                    // Set the command's parameters.
+                    
                     command.Parameters.AddWithValue("@id", id);
                     command.Parameters.AddWithValue("@firstName", firstName);
                     command.Parameters.AddWithValue("@lsatName", lsatName);
@@ -79,7 +70,6 @@ namespace Project1.DAO
                 }
                 catch (Exception ex)
                 {
-                    // An error occurred while trying to connect to the database
                     return false;
                 }
             }
@@ -90,11 +80,8 @@ namespace Project1.DAO
             {
                 try
                 {
-                    // Open the connection to the database
                     connection.Open();
-
-                    // Define the SQL query to execute
-                    //string query = "SELECT * FROM students WHERE id='" + id + "'";
+                    
                     string query = "SELECT * FROM students WHERE id=@id";
 
                     SqlCommand command = new SqlCommand(query, connection);
@@ -106,7 +93,6 @@ namespace Project1.DAO
                 }
                 catch (Exception ex)
                 {
-                    // An error occurred while trying to connect to the database
                     return null;
                 }
             }
@@ -117,11 +103,8 @@ namespace Project1.DAO
             {
                 try
                 {
-                    // Open the connection to the database
                     connection.Open();
-
-                    // Define the SQL query to execute
-                    //string query = "DELETE FROM students WHERE id='" + id + "'";
+                    
                     string query = "DELETE FROM students WHERE id=@id";
 
                     SqlCommand command = new SqlCommand(query, connection);
@@ -133,7 +116,6 @@ namespace Project1.DAO
                 }
                 catch (Exception ex)
                 {
-                    // An error occurred while trying to connect to the database
                     return false;
                 }
             }
@@ -144,10 +126,8 @@ namespace Project1.DAO
             {
                 try
                 {
-                    // Open the connection to the database
                     connection.Open();
 
-                    // Define the SQL query to execute
                     string query = "SELECT * FROM students";
                     SqlCommand command = new SqlCommand(query, connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -159,7 +139,6 @@ namespace Project1.DAO
                 }
                     catch (Exception ex)
                 {
-                    // An error occurred while trying to connect to the database
                     return null;
                 }
             }
@@ -170,11 +149,8 @@ namespace Project1.DAO
             {
                 try
                 {
-                    // Open the connection to the database
                     connection.Open();
-
-                    // Define the SQL query to execute
-                    //string query = "DELETE FROM students";
+                    
                     string query = "DELETE FROM students";
 
                     SqlCommand command = new SqlCommand(query, connection);
@@ -185,7 +161,6 @@ namespace Project1.DAO
                 }
                 catch (Exception ex)
                 {
-                    // An error occurred while trying to connect to the database
                     return false;
                 }
             }

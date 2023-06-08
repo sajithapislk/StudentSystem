@@ -17,7 +17,7 @@ namespace Project1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StudentScreen());
+            Application.Run(new LoginScreen());
         }
     }
 }
