@@ -169,7 +169,7 @@
             this.Controls.Add(this.label1);
             this.Name = "StudentEditScreen";
             this.Text = "StudentEditScreen";
-            this.Load += new System.EventHandler(this.StudentEditScreen_Load);
+            this.Load += new System.EventHandler(this.TeacherEditScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

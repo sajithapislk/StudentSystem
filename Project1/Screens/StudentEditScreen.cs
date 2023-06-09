@@ -16,11 +16,6 @@ namespace Project1.Screens
         string id,firstName, lsatName, dob, gender, address, tp;
         StudentDAO studentDAO = new StudentDAO();
 
-        public StudentEditScreen()
-        {
-            InitializeComponent();
-        }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             firstName = txtFirstName.Text;

@@ -15,10 +15,7 @@ namespace Project1.Screens
     {
         string id,firstName, lsatName, dob, gender, address, tp;
         StudentDAO studentDAO = new StudentDAO();
-        public TeacherEditScreen()
-        {
-            InitializeComponent();
-        }
+      
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             firstName = txtFirstName.Text;
@@ -47,7 +44,7 @@ namespace Project1.Screens
             }
         }
 
-        public void StudentEditScreen(string id, string firstName, string lsatName, string dob, string gender, string address, string tp)
+        public TeacherEditScreen(string id, string firstName, string lsatName, string dob, string gender, string address, string tp)
         {
             InitializeComponent();
 
@@ -60,7 +57,7 @@ namespace Project1.Screens
             this.tp = tp;
         }
 
-        private void StudentEditScreen_Load(object sender, EventArgs e)
+        private void TeacherEditScreen_Load(object sender, EventArgs e)
         {
             txtFirstName.Text = firstName;
             txtLastName.Text = lsatName;

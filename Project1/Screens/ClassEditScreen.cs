@@ -13,32 +13,21 @@ namespace Project1.Screens
 {
     public partial class ClassEditScreen : Form
     {
-        string id,firstName, lsatName, dob, gender, address, tp;
-        StudentDAO studentDAO = new StudentDAO();
-        public ClassEditScreen()
-        {
-            InitializeComponent();
-        }
+        string id, grade, name;
+        ClassDAO classDAO = new ClassDAO();
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            firstName = txtFirstName.Text;
-            lsatName = txtLastName.Text;
-            dob = txtDOB.Text;
-            gender = txtGender.Text;
-            address = txtAddress.Text;
-            tp = txtTP.Text;
+            name = txtFirstName.Text;
+            grade = txtLastName.Text;
 
-            bool res = studentDAO.update(id, firstName, lsatName, dob, gender, address, tp);
+            bool res = classDAO.update(id, name, grade);
 
             if (res == true)
             {
 
                 txtFirstName.Clear();
                 txtLastName.Clear();
-                txtDOB.Clear();
-                txtGender.Clear();
-                txtAddress.Clear();
-                txtTP.Clear();
 
                 StudentScreen studentScreen = (StudentScreen)Application.OpenForms["StudentScreen"];
                 studentScreen.loadData();
@@ -47,27 +36,19 @@ namespace Project1.Screens
             }
         }
 
-        public void StudentEditScreen(string id, string firstName, string lsatName, string dob, string gender, string address, string tp)
+        public ClassEditScreen(string id, string name, string grade)
         {
             InitializeComponent();
 
             this.id = id;
-            this.firstName = firstName;
-            this.lsatName = lsatName;
-            this.dob = dob;
-            this.gender = gender;
-            this.address = address;
-            this.tp = tp;
+            this.name = name;
+            this.grade = grade;
         }
 
-        private void StudentEditScreen_Load(object sender, EventArgs e)
+        private void ClassEditScreen_Load(object sender, EventArgs e)
         {
-            txtFirstName.Text = firstName;
-            txtLastName.Text = lsatName;
-            txtDOB.Text = dob;
-            txtGender.Text = gender;
-            txtAddress.Text = address;
-            txtTP.Text = tp;
+            txtFirstName.Text = name;
+            txtLastName.Text = grade;
         }
     }
 }

@@ -14,7 +14,8 @@ namespace Project1.Screens
 {
     public partial class TeacherScreen : Form
     {
-        StudentDAO studentDAO = new StudentDAO();
+        TeacherDAO teacherDAO = new TeacherDAO();
+
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
 
@@ -30,7 +31,7 @@ namespace Project1.Screens
 
         public void loadData()
         {
-            dgvStudents.DataSource = studentDAO.allStudent();
+            dgvStudents.DataSource = teacherDAO.allTeacher();
             dgvStudents.Refresh();
         }
 
@@ -52,8 +53,8 @@ namespace Project1.Screens
                 string tp = dgvStudents.Rows[e.RowIndex].Cells["home_tp"].Value.ToString();
 
                 MessageBox.Show(id);
-                StudentEditScreen studentEditScreen = new StudentEditScreen(id,firstName, lsatName, dob, gender, address, tp);
-                studentEditScreen.ShowDialog();
+                TeacherEditScreen teacherEditScreen = new TeacherEditScreen(id,firstName, lsatName, dob, gender, address, tp);
+                teacherEditScreen.ShowDialog();
 
             }
             if (dgvStudents.Columns[e.ColumnIndex].HeaderText == "DELETE")
@@ -79,8 +80,8 @@ namespace Project1.Screens
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            StudentInsertScreen studentInsertScreen = new StudentInsertScreen();
-            studentInsertScreen.ShowDialog();
+            TeacherInsertScreen teacherInsertScreen = new TeacherInsertScreen();
+            teacherInsertScreen.ShowDialog();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
