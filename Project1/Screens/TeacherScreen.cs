@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Project1.Screens
 {
-    public partial class StudentScreen : Form
+    public partial class TeacherScreen : Form
     {
         StudentDAO studentDAO = new StudentDAO();
         private const int WM_NCLBUTTONDOWN = 0xA1;
@@ -23,7 +23,7 @@ namespace Project1.Screens
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public StudentScreen()
+        public TeacherScreen()
         {
             InitializeComponent();
         }
@@ -93,4 +93,5 @@ namespace Project1.Screens
         }
 
     }
+
 }

@@ -11,16 +11,14 @@ using System.Windows.Forms;
 
 namespace Project1.Screens
 {
-    public partial class StudentEditScreen : Form
+    public partial class ClassEditScreen : Form
     {
         string id,firstName, lsatName, dob, gender, address, tp;
         StudentDAO studentDAO = new StudentDAO();
-
-        public StudentEditScreen()
+        public ClassEditScreen()
         {
             InitializeComponent();
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             firstName = txtFirstName.Text;
@@ -49,7 +47,7 @@ namespace Project1.Screens
             }
         }
 
-        public StudentEditScreen(string id, string firstName, string lsatName, string dob, string gender, string address, string tp)
+        public void StudentEditScreen(string id, string firstName, string lsatName, string dob, string gender, string address, string tp)
         {
             InitializeComponent();
 
