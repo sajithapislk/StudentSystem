@@ -18,19 +18,19 @@ namespace Project1.Screens
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            name = txtFirstName.Text;
-            grade = txtLastName.Text;
+            name = txtName.Text;
+            grade = txtGrade.Text;
 
             bool res = classDAO.update(id, name, grade);
 
             if (res == true)
             {
 
-                txtFirstName.Clear();
-                txtLastName.Clear();
+                txtName.Clear();
+                txtGrade.Clear();
 
-                StudentScreen studentScreen = (StudentScreen)Application.OpenForms["StudentScreen"];
-                studentScreen.loadData();
+                ClassScreen classScreen = (ClassScreen)Application.OpenForms["ClassScreen"];
+                classScreen.loadData();
                 this.Close();
 
             }
@@ -47,8 +47,8 @@ namespace Project1.Screens
 
         private void ClassEditScreen_Load(object sender, EventArgs e)
         {
-            txtFirstName.Text = name;
-            txtLastName.Text = grade;
+            txtName.Text = name;
+            txtGrade.Text = grade;
         }
     }
 }

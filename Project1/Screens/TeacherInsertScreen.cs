@@ -13,7 +13,7 @@ namespace Project1.Screens
 {
     public partial class TeacherInsertScreen : Form
     {
-        StudentDAO studentDAO = new StudentDAO();
+        TeacherDAO teacherDAO = new TeacherDAO();
         public TeacherInsertScreen()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace Project1.Screens
             string address = txtAddress.Text;
             string tp = txtTP.Text;
 
-            bool res = studentDAO.insert(firstName, lsatName, dob, gender, address, tp);
+            bool res = teacherDAO.insert(firstName, lsatName, dob, gender, address, tp);
 
             if (res == true){
 

@@ -66,7 +66,7 @@ namespace Project1.DAO
                 }
             }
         }
-        public SqlDataReader studentInfo(string id)
+        public SqlDataReader ClassesInfo(string id)
         {
             using (SqlConnection connection = new SqlConnection(db.GetConnection()))
             {
@@ -89,7 +89,7 @@ namespace Project1.DAO
                 }
             }
         }
-        public bool deleteStudent(string id)
+        public bool deleteClasses(string id)
         {
             using (SqlConnection connection = new SqlConnection(db.GetConnection()))
             {
@@ -112,7 +112,7 @@ namespace Project1.DAO
                 }
             }
         }
-        public DataTable allStudent()
+        public DataTable allClasses()
         {
             using (SqlConnection connection = new SqlConnection(db.GetConnection()))
             {

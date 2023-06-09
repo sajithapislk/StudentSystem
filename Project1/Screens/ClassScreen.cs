@@ -14,7 +14,7 @@ namespace Project1.Screens
 {
     public partial class ClassScreen : Form
     {
-        StudentDAO studentDAO = new StudentDAO();
+        ClassDAO classDAO = new ClassDAO();
 
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
@@ -32,7 +32,7 @@ namespace Project1.Screens
 
         public void loadData()
         {
-            dgvStudents.DataSource = studentDAO.allStudent();
+            dgvStudents.DataSource = classDAO.allClasses();
             dgvStudents.Refresh();
         }
 
@@ -81,8 +81,8 @@ namespace Project1.Screens
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            StudentInsertScreen studentInsertScreen = new StudentInsertScreen();
-            studentInsertScreen.ShowDialog();
+            ClassInsertScreen classInsertScreen = new ClassInsertScreen();
+            classInsertScreen.ShowDialog();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)

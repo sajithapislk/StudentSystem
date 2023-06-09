@@ -165,7 +165,7 @@
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(133, 23);
             this.btnInsert.TabIndex = 2;
-            this.btnInsert.Text = "Insert Student";
+            this.btnInsert.Text = "Insert Teacher";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 

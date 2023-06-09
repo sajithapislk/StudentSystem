@@ -13,36 +13,23 @@ namespace Project1.Screens
 {
     public partial class ClassInsertScreen: Form
     {
-        StudentDAO studentDAO = new StudentDAO();
+        ClassDAO classDAO = new ClassDAO();
         public ClassInsertScreen()
         {
             InitializeComponent();
         }
 
-        private void StudentInsertScreen_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            string firstName = txtFirstName.Text;
-            string lsatName = txtLastName.Text;
-            string dob = txtDOB.Text;
-            string gender = txtGender.Text;
-            string address = txtAddress.Text;
-            string tp = txtTP.Text;
+            string name = txtName.Text;
+            string grade = txtGrade.Text;
 
-            bool res = studentDAO.insert(firstName, lsatName, dob, gender, address, tp);
+            bool res = classDAO.insert(name, grade);
 
             if (res == true){
 
-                txtFirstName.Clear();
-                txtLastName.Clear();
-                txtDOB.Clear();
-                txtGender.Clear();
-                txtAddress.Clear();
-                txtTP.Clear();
+                txtName.Clear();
+                txtGrade.Clear();
 
             }
         }

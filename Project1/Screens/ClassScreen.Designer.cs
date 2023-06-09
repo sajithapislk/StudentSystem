@@ -30,21 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassScreen));
             this.dgvStudents = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_of_birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.home_tp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,10 +57,6 @@
             this.id,
             this.first_name,
             this.last_name,
-            this.date_of_birth,
-            this.gender,
-            this.address,
-            this.home_tp,
             this.edit,
             this.delete});
             this.dgvStudents.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -80,62 +72,6 @@
             this.dgvStudents.Size = new System.Drawing.Size(960, 357);
             this.dgvStudents.TabIndex = 0;
             this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellClick);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            // 
-            // first_name
-            // 
-            this.first_name.DataPropertyName = "first_name";
-            this.first_name.HeaderText = "F Name";
-            this.first_name.Name = "first_name";
-            // 
-            // last_name
-            // 
-            this.last_name.DataPropertyName = "last_name";
-            this.last_name.HeaderText = "L Name";
-            this.last_name.Name = "last_name";
-            // 
-            // date_of_birth
-            // 
-            this.date_of_birth.DataPropertyName = "date_of_birth";
-            this.date_of_birth.HeaderText = "DOB";
-            this.date_of_birth.Name = "date_of_birth";
-            // 
-            // gender
-            // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            // 
-            // address
-            // 
-            this.address.DataPropertyName = "address";
-            this.address.HeaderText = "Address";
-            this.address.Name = "address";
-            // 
-            // home_tp
-            // 
-            this.home_tp.DataPropertyName = "home_tp";
-            this.home_tp.HeaderText = "HomeTP";
-            this.home_tp.Name = "home_tp";
-            // 
-            // edit
-            // 
-            this.edit.HeaderText = "EDIT";
-            this.edit.Name = "edit";
-            this.edit.Text = "EDIT";
-            this.edit.UseColumnTextForButtonValue = true;
-            // 
-            // delete
-            // 
-            this.delete.HeaderText = "DELETE";
-            this.delete.Name = "delete";
-            this.delete.Text = "DELETE";
-            this.delete.UseColumnTextForButtonValue = true;
             // 
             // panel1
             // 
@@ -165,7 +101,7 @@
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(133, 23);
             this.btnInsert.TabIndex = 2;
-            this.btnInsert.Text = "Insert Student";
+            this.btnInsert.Text = "Insert Class";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -198,6 +134,38 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(960, 357);
             this.panel2.TabIndex = 2;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            // 
+            // first_name
+            // 
+            this.first_name.DataPropertyName = "name";
+            this.first_name.HeaderText = "Name";
+            this.first_name.Name = "first_name";
+            // 
+            // last_name
+            // 
+            this.last_name.DataPropertyName = "grade";
+            this.last_name.HeaderText = "Grade";
+            this.last_name.Name = "last_name";
+            // 
+            // edit
+            // 
+            this.edit.HeaderText = "EDIT";
+            this.edit.Name = "edit";
+            this.edit.Text = "EDIT";
+            this.edit.UseColumnTextForButtonValue = true;
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "DELETE";
+            this.delete.Name = "delete";
+            this.delete.Text = "DELETE";
+            this.delete.UseColumnTextForButtonValue = true;
             // 
             // ClassScreen
             // 
@@ -232,10 +200,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn first_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn last_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date_of_birth;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn home_tp;
         private System.Windows.Forms.DataGridViewButtonColumn edit;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
     }
