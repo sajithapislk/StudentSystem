@@ -41,6 +41,42 @@ namespace Project1.DAO
                 }
             }
         }
+        public String getId(string firstName, string lsatName, string dob, string gender, string address, string tp)
+        {
+            using (SqlConnection connection = new SqlConnection(db.GetConnection()))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT * FROM teachers WHERE first_name=@firstName AND last_name=@lsatName AND date_of_birth=@dob AND gender=@gender AND address=@address AND home_tp=@tp";
+
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    command.Parameters.AddWithValue("@firstName", firstName);
+                    command.Parameters.AddWithValue("@lsatName", lsatName);
+                    command.Parameters.AddWithValue("@dob", dob);
+                    command.Parameters.AddWithValue("@gender", gender);
+                    command.Parameters.AddWithValue("@address", address);
+                    command.Parameters.AddWithValue("@tp", tp);
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        return reader.GetValue(0).ToString();
+                    }
+                    else
+                    {
+                        return "empty";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return ex.ToString();
+                }
+            }
+        }
 
         public bool update(string id, string firstName, string lsatName, string dob, string gender, string address, string tp)
         {

@@ -34,6 +34,12 @@ namespace Project1.Screens
                 this.Close();
 
             }
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         public ClassEditScreen(string id, string name, string grade)

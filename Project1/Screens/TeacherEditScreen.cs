@@ -42,6 +42,7 @@ namespace Project1.Screens
                 this.Close();
 
             }
+            this.Close();
         }
 
         public TeacherEditScreen(string id, string firstName, string lsatName, string dob, string gender, string address, string tp)

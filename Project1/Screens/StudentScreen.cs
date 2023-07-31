@@ -15,6 +15,7 @@ namespace Project1.Screens
     public partial class StudentScreen : Form
     {
         StudentDAO studentDAO = new StudentDAO();
+        ClassDAO classDAO = new ClassDAO();
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
 
@@ -32,11 +33,6 @@ namespace Project1.Screens
         {
             dgvStudents.DataSource = studentDAO.allStudent();
             dgvStudents.Refresh();
-        }
-
-        private void StudentScreen_Load(object sender, EventArgs e)
-        {
-            loadData();
         }
 
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -92,5 +88,9 @@ namespace Project1.Screens
             }
         }
 
+        private void StudentScreen_Activated(object sender, EventArgs e)
+        {
+            loadData();
+        }
     }
 }

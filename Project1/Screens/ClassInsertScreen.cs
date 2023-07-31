@@ -31,7 +31,14 @@ namespace Project1.Screens
                 txtName.Clear();
                 txtGrade.Clear();
 
+                this.Close();
+
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

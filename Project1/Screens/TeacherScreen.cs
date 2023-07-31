@@ -35,10 +35,6 @@ namespace Project1.Screens
             dgvStudents.Refresh();
         }
 
-        private void StudentScreen_Load(object sender, EventArgs e)
-        {
-            loadData();
-        }
 
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -93,6 +89,10 @@ namespace Project1.Screens
             }
         }
 
+        private void TeacherScreen_Activated(object sender, EventArgs e)
+        {
+            loadData();
+        }
     }
 
 }

@@ -35,41 +35,25 @@ namespace Project1.Screens
             dgvStudents.DataSource = classDAO.allClasses();
             dgvStudents.Refresh();
         }
-
-        private void StudentScreen_Load(object sender, EventArgs e)
-        {
-            loadData();
-        }
+        
 
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvStudents.Columns[e.ColumnIndex].HeaderText == "EDIT")
             {
                 string id = dgvStudents.Rows[e.RowIndex].Cells["id"].Value.ToString();
-                string firstName = dgvStudents.Rows[e.RowIndex].Cells["first_name"].Value.ToString();
-                string lsatName = dgvStudents.Rows[e.RowIndex].Cells["last_name"].Value.ToString();
-                string dob = dgvStudents.Rows[e.RowIndex].Cells["date_of_birth"].Value.ToString();
-                string gender = dgvStudents.Rows[e.RowIndex].Cells["gender"].Value.ToString();
-                string address = dgvStudents.Rows[e.RowIndex].Cells["address"].Value.ToString();
-                string tp = dgvStudents.Rows[e.RowIndex].Cells["home_tp"].Value.ToString();
-
-                MessageBox.Show(id);
-                StudentEditScreen studentEditScreen = new StudentEditScreen(id,firstName, lsatName, dob, gender, address, tp);
+                string name = dgvStudents.Rows[e.RowIndex].Cells["name"].Value.ToString();
+                string grade = dgvStudents.Rows[e.RowIndex].Cells["grade"].Value.ToString();
+                
+                ClassEditScreen studentEditScreen = new ClassEditScreen(id, name, grade);
                 studentEditScreen.ShowDialog();
 
             }
             if (dgvStudents.Columns[e.ColumnIndex].HeaderText == "DELETE")
             {
                 string id = dgvStudents.Rows[e.RowIndex].Cells["id"].Value.ToString();
-                string firstName = dgvStudents.Rows[e.RowIndex].Cells["first_name"].Value.ToString();
-                string lsatName = dgvStudents.Rows[e.RowIndex].Cells["last_name"].Value.ToString();
-                string dob = dgvStudents.Rows[e.RowIndex].Cells["date_of_birth"].Value.ToString();
-                string gender = dgvStudents.Rows[e.RowIndex].Cells["gender"].Value.ToString();
-                string address = dgvStudents.Rows[e.RowIndex].Cells["address"].Value.ToString();
-                string tp = dgvStudents.Rows[e.RowIndex].Cells["home_tp"].Value.ToString();
-                
-                StudentEditScreen studentEditScreen = new StudentEditScreen(id, firstName, lsatName, dob, gender, address, tp);
-                studentEditScreen.ShowDialog();
+
+                bool res =  classDAO.deleteClasses(id);
 
             }
         }
@@ -92,6 +76,12 @@ namespace Project1.Screens
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void ClassScreen_Activated(object sender, EventArgs e)
+        {
+
+            loadData();
         }
     }
 }

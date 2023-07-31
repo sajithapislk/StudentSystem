@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassScreen));
             this.dgvStudents = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -55,8 +55,8 @@
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
-            this.first_name,
-            this.last_name,
+            this.name,
+            this.grade,
             this.edit,
             this.delete});
             this.dgvStudents.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -72,6 +72,38 @@
             this.dgvStudents.Size = new System.Drawing.Size(960, 357);
             this.dgvStudents.TabIndex = 0;
             this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
+            // 
+            // grade
+            // 
+            this.grade.DataPropertyName = "grade";
+            this.grade.HeaderText = "Grade";
+            this.grade.Name = "grade";
+            // 
+            // edit
+            // 
+            this.edit.HeaderText = "EDIT";
+            this.edit.Name = "edit";
+            this.edit.Text = "EDIT";
+            this.edit.UseColumnTextForButtonValue = true;
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "DELETE";
+            this.delete.Name = "delete";
+            this.delete.Text = "DELETE";
+            this.delete.UseColumnTextForButtonValue = true;
             // 
             // panel1
             // 
@@ -135,42 +167,11 @@
             this.panel2.Size = new System.Drawing.Size(960, 357);
             this.panel2.TabIndex = 2;
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            // 
-            // first_name
-            // 
-            this.first_name.DataPropertyName = "name";
-            this.first_name.HeaderText = "Name";
-            this.first_name.Name = "first_name";
-            // 
-            // last_name
-            // 
-            this.last_name.DataPropertyName = "grade";
-            this.last_name.HeaderText = "Grade";
-            this.last_name.Name = "last_name";
-            // 
-            // edit
-            // 
-            this.edit.HeaderText = "EDIT";
-            this.edit.Name = "edit";
-            this.edit.Text = "EDIT";
-            this.edit.UseColumnTextForButtonValue = true;
-            // 
-            // delete
-            // 
-            this.delete.HeaderText = "DELETE";
-            this.delete.Name = "delete";
-            this.delete.Text = "DELETE";
-            this.delete.UseColumnTextForButtonValue = true;
-            // 
             // ClassScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(960, 389);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -180,7 +181,7 @@
             this.Name = "ClassScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentScreen";
-            this.Load += new System.EventHandler(this.StudentScreen_Load);
+            this.Activated += new System.EventHandler(this.ClassScreen_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -198,8 +199,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvStudents;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn first_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn last_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn grade;
         private System.Windows.Forms.DataGridViewButtonColumn edit;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
     }

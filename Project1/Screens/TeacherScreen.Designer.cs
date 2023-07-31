@@ -203,6 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(960, 389);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -212,7 +213,7 @@
             this.Name = "TeacherScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentScreen";
-            this.Load += new System.EventHandler(this.StudentScreen_Load);
+            this.Activated += new System.EventHandler(this.TeacherScreen_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

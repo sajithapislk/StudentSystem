@@ -55,5 +55,10 @@ namespace Project1.Screens
                 studentScreen.Show();
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
