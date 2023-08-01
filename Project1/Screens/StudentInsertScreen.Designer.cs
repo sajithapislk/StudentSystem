@@ -240,6 +240,7 @@
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInsert);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentInsertScreen";
             this.Text = "StudentInsert";
             this.Load += new System.EventHandler(this.StudentInsertScreen_Load);

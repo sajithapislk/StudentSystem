@@ -168,6 +168,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentEditScreen";
             this.Text = "StudentEditScreen";
             this.Load += new System.EventHandler(this.StudentEditScreen_Load);

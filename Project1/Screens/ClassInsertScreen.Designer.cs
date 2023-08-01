@@ -35,8 +35,8 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +94,16 @@
             this.panel1.Size = new System.Drawing.Size(399, 32);
             this.panel1.TabIndex = 24;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(208, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Student Management System";
+            // 
             // btnClose
             // 
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
@@ -104,16 +114,6 @@
             this.btnClose.TabIndex = 0;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Student Management System";
             // 
             // ClassInsertScreen
             // 
@@ -127,6 +127,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInsert);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClassInsertScreen";
             this.Text = "StudentInsert";
             this.panel1.ResumeLayout(false);

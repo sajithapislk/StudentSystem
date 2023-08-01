@@ -127,7 +127,9 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnUpdate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClassEditScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentEditScreen";
             this.Load += new System.EventHandler(this.ClassEditScreen_Load);
             this.panel1.ResumeLayout(false);
