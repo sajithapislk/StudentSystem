@@ -14,6 +14,12 @@ namespace Project1.Screens
     public partial class StudentEditScreen : Form
     {
         string id,firstName, lsatName, dob, gender, address, tp;
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         StudentDAO studentDAO = new StudentDAO();
 
         private void btnUpdate_Click(object sender, EventArgs e)

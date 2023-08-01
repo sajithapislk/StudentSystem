@@ -36,5 +36,10 @@ namespace Project1.Screens
                 MessageBox.Show(res);
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

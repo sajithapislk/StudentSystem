@@ -69,7 +69,7 @@
             this.dgvStudents.ShowCellToolTips = false;
             this.dgvStudents.ShowEditingIcon = false;
             this.dgvStudents.ShowRowErrors = false;
-            this.dgvStudents.Size = new System.Drawing.Size(960, 357);
+            this.dgvStudents.Size = new System.Drawing.Size(677, 357);
             this.dgvStudents.TabIndex = 0;
             this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellClick);
             // 
@@ -114,13 +114,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 32);
+            this.panel1.Size = new System.Drawing.Size(677, 32);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(843, 4);
+            this.btnLogout.Location = new System.Drawing.Point(562, 4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(77, 23);
             this.btnLogout.TabIndex = 2;
@@ -151,7 +151,7 @@
             // 
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClose.Location = new System.Drawing.Point(926, 2);
+            this.btnClose.Location = new System.Drawing.Point(645, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(26, 26);
             this.btnClose.TabIndex = 0;
@@ -164,7 +164,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 32);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(960, 357);
+            this.panel2.Size = new System.Drawing.Size(677, 357);
             this.panel2.TabIndex = 2;
             // 
             // ClassScreen
@@ -172,7 +172,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(960, 389);
+            this.ClientSize = new System.Drawing.Size(677, 389);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

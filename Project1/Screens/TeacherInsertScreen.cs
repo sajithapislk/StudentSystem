@@ -78,5 +78,10 @@ namespace Project1.Screens
             dgvStudents.DataSource = classDAO.allClasses();
             dgvStudents.Refresh();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
